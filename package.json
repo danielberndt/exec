@@ -1,6 +1,6 @@
 {
   "name": "@danielberndt/exec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrap child_process.exec with Promise and add pretty output",
   "main": "index.js",
   "author": "Daniel Berndt <daniel.berndt@gmail.com> (http://danielberndt.net/)",
@@ -9,7 +9,9 @@
   "scripts": {
     "lint": "eslint index.js"
   },
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "types": "index.d.ts",
   "dependencies": {
     "chalk": "^2.3.0"
