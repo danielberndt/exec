@@ -1,6 +1,6 @@
 {
   "name": "@danielberndt/exec",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Wrap child_process.exec with Promise and add pretty output",
   "main": "index.js",
   "author": "Daniel Berndt <daniel.berndt@gmail.com> (http://danielberndt.net/)",
