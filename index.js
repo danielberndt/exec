@@ -1,6 +1,8 @@
 const nodeExec = require("child_process").exec;
 const chalk = require("chalk");
 
+const indent = val => val.replace(/\n/g, "\n  ");
+
 const exec = cmd =>
   new Promise((resolve, reject) => {
     const output = [];
@@ -18,10 +20,10 @@ const exec = cmd =>
     });
     childProcess.stdout.on("data", data => {
       output.push(data.trim());
-      console.log(chalk.dim(`>   ${data.trim()}`));
+      console.log(chalk.dim(`> ${indent(data.trim())}`));
     });
     childProcess.stderr.on("data", data => {
-      console.log(`${chalk.red(">   ")}${chalk.dim(data.trim())}`);
+      console.log(`${chalk.red("> ")}${chalk.dim(indent(data.trim()))}`);
     });
   });
 
