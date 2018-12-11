@@ -3,10 +3,10 @@ const chalk = require("chalk");
 
 const indent = val => val.replace(/\n/g, "\n  ");
 
-const exec = cmd =>
+const exec = (cmd, opts) =>
   new Promise((resolve, reject) => {
     const output = [];
-    const childProcess = nodeExec(cmd);
+    const childProcess = nodeExec(cmd, opts);
     console.log(chalk.blue(cmd));
     childProcess.addListener("error", reject);
     childProcess.addListener("exit", code => {
