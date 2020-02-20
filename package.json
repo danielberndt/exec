@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "Wrap child_process.exec with Promise and add pretty output",
   "main": "index.js",
-  "author": "Daniel Berndt <daniel.berndt@gmail.com> (http://danielberndt.net/)",
+  "author": "Daniel Berndt <daniel.berndt@gmail.com> (https://danielberndt.net/)",
   "license": "ISC",
   "repository": "danielberndt/exec",
   "scripts": {

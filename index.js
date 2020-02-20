@@ -14,12 +14,16 @@ const exec = (cmd, opts) =>
         console.log("");
         resolve(output.join(""));
       } else {
-        console.log(`${chalk.red("!  ")}${chalk.bgRed.white(` Command exited with ${code} `)}\n`);
+        console.log(
+          `${chalk.red("!  ")}${chalk.bgRed.white(
+            ` Command exited with ${code} `
+          )}\n`
+        );
         reject(code);
       }
     });
     childProcess.stdout.on("data", data => {
-      output.push(data.trim());
+      output.push(data);
       console.log(chalk.dim(`> ${indent(data.trim())}`));
     });
     childProcess.stderr.on("data", data => {
